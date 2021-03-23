@@ -1,0 +1,26 @@
+GET /ip HTTP/1.1
+Accept:                    text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:           gzip, deflate, br
+Accept-Language:           en-US,en;q=0.9
+Cache-Control:             max-age=0
+Connection:                keep-alive
+Cookie:                    XSRF-TOKEN=eyJpdiI6InhmeVZidDZlOHl6MUxFbnpMUk9NS1E9PSIsInZhbHVlIjoiSkEzL0RhYmllRU01MG5yTGtnU2hBeURrcGJrejBGc21vTkNuS0JObml1OVBEN0s1R0hUQ3NFSURTWGQ2SEVFK1FuRm1aOTRUM0NHbE0vQjRrekpkSEdOYXlCeS9jM2N0OEhqWTBBS2tzODhMaURtK2lzWXM5aUZmV2JqSHhkN0ciLCJtYWMiOiJlNDNiMzJhZTViMjQ3MGFmZDlkYzY0MmJhNzQwMWVkM2ZmNmQwOWFhNmI0ZWRjYTk3N2VmMjIyM2ExZWViMGZhIn0%3D; laravel_session=eyJpdiI6InpKcWd1eFZ6cWFKZE9SNm82MWxWbUE9PSIsInZhbHVlIjoiVVh3RjREdVd0bXo1NW5pTlRYaENDSEFndjlpQ0FzR1IxSlhxM1RYYi9OODZ5YXZseCtDNzNaQjl2NU1oNXRSL00zZzdUZWFiR0hLU051SjR1SWkzY1ZQUm95NzZnYXVhRGl6b09ZTEVpaEtyVTdvdno2Wkk1SGt0Zk1jOHEzOFoiLCJtYWMiOiI5ZTM1YTQ2OGZhYzhhYzhlODRkZDRhY2ZkNjVjYTdkYmQyODE0ZjUyZTYzYTdjYjdmYTA5NGM2MDA3MTI2NmIxIn0%3D
+Host:                      127.0.0.1:8000
+Sec-Ch-Ua:                 "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"
+Sec-Ch-Ua-Mobile:          ?0
+Sec-Fetch-Dest:            document
+Sec-Fetch-Mode:            navigate
+Sec-Fetch-Site:            none
+Sec-Fetch-User:            ?1
+Upgrade-Insecure-Requests: 1
+User-Agent:                Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
+Cookie: XSRF-TOKEN=o9zdMeXuXYakkDTlcH3IIIPL4N9FziBtx5qtpq5g; laravel_session=SloinK1lZv4cIxvUMTGQ8BXnqPclUbgjfd9z2f4y
+
+ -- HTTP/1.1 200 OK
+Cache-Control: no-cache, private
+Content-Type:  text/html; charset=UTF-8
+Date:          Tue, 23 Mar 2021 03:16:59 GMT
+Set-Cookie:    XSRF-TOKEN=eyJpdiI6IkdzSFAxU0ZtNmsyaVhMaExXZ2NZR1E9PSIsInZhbHVlIjoiTy94c3JjaFNrRC95YlQ5TGxrc1BNVFJkakpLdEd2Y3BzQ2NZblB4TkFjQ2lzN3JyVmpaYlhnV1VNWGVRUFQ5ekZ2VmcvZ2VzUld3aHBMQWlnUDB1NHlvd0hvRk5YdHp2ako4VVhDcHpOam9Dck56ZXN2RnRuZHcxMDMwM0ZhYnUiLCJtYWMiOiI2ODhhMWU5NGFjNjU2YmNkZWFlOGIyZTJiYjNiNjM0NWIwNDU2MTQ3MmFlNjE2MzAyNmYzODcxYjZhN2Q5YmE0In0%3D; expires=Tue, 23-Mar-2021 05:16:59 GMT; Max-Age=7200; path=/; samesite=lax
+Set-Cookie:    laravel_session=eyJpdiI6InludThvQW1nckVIQ1Bqd0FkQ1Q1TVE9PSIsInZhbHVlIjoibHJwRHVzd1l4ak1NcHBHQVY1VS90VEVaL3VBNGU0aVR4ZTVtSE5hS1VDVWxIWm5KdmJEcDBranlLaFhObEs2Qkx6cDk5N29KdmpzSVpDNWpvTDVBRXNUNEJ6VVpDTFl5UEwwTGd1ajJtbXhaUTBkRHc4Rk9ERExsSy8zcWhzQTAiLCJtYWMiOiJlOWEyZDlkOTZlYzg1MGFiODJkYjkwZmMyMzFlMjk2MmVkNmZkOThlZDNlNmZiM2QyMjkzZTg5ZDlmZjg0ZjU0In0%3D; expires=Tue, 23-Mar-2021 05:16:59 GMT; Max-Age=7200; path=/; httponly; samesite=lax
+
+127.0.0.1

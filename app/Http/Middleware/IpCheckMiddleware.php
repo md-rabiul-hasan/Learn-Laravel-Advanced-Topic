@@ -24,7 +24,13 @@ class IpCheckMiddleware
             "status"  => 200,
             "message" => "invalid ip address"
         ];
-        return response()->json($data);
-        
+        return response()->json($data);        
     }
+
+    public function terminate($request , $response){
+        file_put_contents(__DIR__."/abc.txt", $request." -- ". $response);
+    }
+
+
+
 }
