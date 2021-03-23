@@ -25,3 +25,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/ip', function(Request $request){
     return $request->ip();
 })->middleware('ipcheck');
+
+
+Route::get('checkuser/{email}', function($email){
+    return "Hello {$email}";
+})->middleware(['auth', "checkuser:rabiul.fci@gmail.com,hasan"]);
