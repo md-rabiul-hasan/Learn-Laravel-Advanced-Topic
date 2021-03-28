@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\FromValidationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,9 @@ Route::get('/ip', function(Request $request){
 Route::get('checkuser/{email}', function($email){
     return "Hello {$email}";
 })->middleware(['auth', "checkuser:rabiul.fci@gmail.com,hasan"]);
+
+##############################################
+# Laravel Form Validation
+##############################################
+Route::get('form-validation',[FromValidationController::class, 'create']);
+Route::post('form-validation',[FromValidationController::class, 'store'])->name('form_velidation.store');
