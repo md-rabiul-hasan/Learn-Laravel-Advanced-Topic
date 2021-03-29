@@ -335,6 +335,16 @@ eval("window._ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodas
 
 /***/ }),
 
+/***/ "./resources/js/my.js":
+/*!****************************!*\
+  !*** ./resources/js/my.js ***!
+  \****************************/
+/***/ (() => {
+
+eval("alert(\"Hello World\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvbXkuanM/MGQ4MyJdLCJuYW1lcyI6WyJhbGVydCJdLCJtYXBwaW5ncyI6IkFBQUFBLEtBQUssQ0FBQyxhQUFELENBQUwiLCJzb3VyY2VzQ29udGVudCI6WyJhbGVydChcIkhlbGxvIFdvcmxkXCIpOyJdLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvbXkuanMuanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/js/my.js\n");
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
@@ -568,6 +578,7 @@ eval("// shim for using process in browser\nvar process = module.exports = {};\n
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/my.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
