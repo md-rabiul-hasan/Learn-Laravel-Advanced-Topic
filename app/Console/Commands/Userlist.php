@@ -2,23 +2,24 @@
 
 namespace App\Console\Commands;
 
+use App\Models\User;
 use Illuminate\Console\Command;
 
-class Hello extends Command
+class Userlist extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'hello {firstname} {--l|lastname=islam}';
+    protected $signature = 'userlist';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'This is make command from command';
+    protected $description = 'Show all user information from user table';
 
     /**
      * Create a new command instance.
@@ -37,14 +38,8 @@ class Hello extends Command
      */
     public function handle()
     {
-        $firstname = $this->argument('firstname');
-        $lastname = $this->option('lastname');
-        // return $this->info("My name is {$firstname} {$lastname}");
-
-        $name = $this->ask("What is your name ?");
-        $confirm = $this->confirm("Are you want to print your name ?");
-        if($confirm){
-            return $this->info($name);
-        }
+        $header = ["name", "email"];
+        $data = User::select('name','email')->get();
+        return $this->table($header, $data);
     }
 }
