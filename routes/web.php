@@ -37,3 +37,11 @@ Route::get('checkuser/{email}', function($email){
 ##############################################
 Route::get('form-validation',[FromValidationController::class, 'create']);
 Route::post('form-validation',[FromValidationController::class, 'store'])->name('form_velidation.store');
+
+##############################################
+# Lravel Localization
+##############################################
+Route::get('/locale/{lang?}', function($lang = null){
+    App::setLocale($lang);
+    return view('navbar');
+});

@@ -1,1 +1,1 @@
-alert("yes");
+console.log("yes");
