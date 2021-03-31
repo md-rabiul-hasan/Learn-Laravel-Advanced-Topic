@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventListenerController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\FromValidationController;
@@ -52,4 +53,7 @@ Route::get('/locale/{lang?}', function($lang = null){
 ##############################################
 Route::get('sendmail', [QueueController::class, 'sendMail']);
 
-
+##############################################
+# Lravel Event Listener
+##############################################
+Route::get('event-listener', [EventListenerController::class, 'eventListener']);
