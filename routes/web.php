@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\FromValidationController;
+use App\Http\Controllers\QueueController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,3 +46,10 @@ Route::get('/locale/{lang?}', function($lang = null){
     App::setLocale($lang);
     return view('navbar');
 });
+
+##############################################
+# Lravel Queue
+##############################################
+Route::get('sendmail', [QueueController::class, 'sendMail']);
+
+
