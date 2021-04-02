@@ -9,6 +9,7 @@ use App\Http\Controllers\GatePolicyController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\QueueController;
 use App\Http\Controllers\SendMessageEventController;
+use Illuminate\Notifications\Notification;
 
 /*
 |--------------------------------------------------------------------------
@@ -82,3 +83,4 @@ Route::get('gatepolicy', [GatePolicyController::class, 'delete'])->middleware('c
 # Lravel Notification
 ##############################################
 Route::get('notification', [NotificationController::class, 'notify']);
+Route::get('send-notification', [NotificationController::class, 'sendNotification']);
