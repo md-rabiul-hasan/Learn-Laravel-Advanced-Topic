@@ -4,7 +4,9 @@ use App\Http\Controllers\EventListenerController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\FromValidationController;
+use App\Http\Controllers\GateController;
 use App\Http\Controllers\QueueController;
+use App\Http\Controllers\SendMessageEventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,3 +59,14 @@ Route::get('sendmail', [QueueController::class, 'sendMail']);
 # Lravel Event Listener
 ##############################################
 Route::get('event-listener', [EventListenerController::class, 'eventListener']);
+
+
+##############################################
+# Lravel Event Listener Broadcast Pusher Echo
+##############################################
+Route::get('event', [SendMessageEventController::class, 'sendMessage']);
+
+##############################################
+# Lravel Gate
+##############################################
+Route::get('subscribe', [GateController::class, 'subscribe']);

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Providers;
+namespace App\Listeners;
 
-use App\Providers\TaskEvent;
+use App\Events\SendMessageEvent;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class TaskEventListener
+class SendMessageEventListner
 {
     /**
      * Create the event listener.
@@ -21,10 +21,10 @@ class TaskEventListener
     /**
      * Handle the event.
      *
-     * @param  TaskEvent  $event
+     * @param  SendMessageEvent  $event
      * @return void
      */
-    public function handle(TaskEvent $event)
+    public function handle(SendMessageEvent $event)
     {
         //
     }
