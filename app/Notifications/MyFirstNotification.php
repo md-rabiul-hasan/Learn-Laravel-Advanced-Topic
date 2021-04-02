@@ -60,7 +60,7 @@ class MyFirstNotification extends Notification implements ShouldQueue
     public function toArray($notifiable)
     {
         return [
-            'order_id' => $this->details['order_id']
+            'data' => "order no ".$this->details['order_id']." order has been successfully."
         ];
     }
 }
