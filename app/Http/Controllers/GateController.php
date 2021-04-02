@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class GateController extends Controller
 {
     public function subscribe(){
-        if (Gate::allows('subsciber-check', Auth::user())) {
+        if (Gate::allows('subscriber_only', Auth::user())) {
             return "You are my old Subscriber";
         }else{
             return "Your subscription successfully";

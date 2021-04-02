@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Policies\Subsciber;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
@@ -14,6 +15,7 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         // 'App\Models\Model' => 'App\Policies\ModelPolicy',
+        User::class => Subsciber::class
     ];
 
     /**
@@ -25,12 +27,6 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        Gate::define('subsciber-check', function($user){
-            if($user->is_subscriber == 1){
-                return true;
-            }else{
-                return false;
-            }
-        });
+        Gate::define('subscriber_only', 'App\Policies\Subsciber@subscriberOnly');
     }
 }

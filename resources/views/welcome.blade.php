@@ -26,7 +26,7 @@
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
                         <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
-                        @can('subsciber-check', Auth::user())
+                        @can('subscriber_only', Auth::user())
                             <a href="{{ url('/subscribe') }}" class="text-sm text-gray-700 underline">Subscribe</a>
                         @endcan
                         
