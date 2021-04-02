@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\FromValidationController;
 use App\Http\Controllers\GateController;
 use App\Http\Controllers\GatePolicyController;
+use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\QueueController;
 use App\Http\Controllers\SendMessageEventController;
 
@@ -76,3 +77,8 @@ Route::get('subscribe', [GateController::class, 'subscribe']);
 # Lravel Gate & Policy
 ##############################################
 Route::get('gatepolicy', [GatePolicyController::class, 'delete'])->middleware('can:is_admin');
+
+##############################################
+# Lravel Notification
+##############################################
+Route::get('notification', [NotificationController::class, 'notify']);
