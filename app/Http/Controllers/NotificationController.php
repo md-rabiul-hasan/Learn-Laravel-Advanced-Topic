@@ -35,4 +35,8 @@ class NotificationController extends Controller
         dd('done');
     }
 
+    public function markAllRead(){
+        Auth::user()->unreadNotifications->markAsRead();
+        return redirect()->back();
+    }
 }

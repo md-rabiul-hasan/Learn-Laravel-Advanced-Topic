@@ -84,3 +84,4 @@ Route::get('gatepolicy', [GatePolicyController::class, 'delete'])->middleware('c
 ##############################################
 Route::get('notification', [NotificationController::class, 'notify']);
 Route::get('send-notification', [NotificationController::class, 'sendNotification']);
+Route::get('notification-mark-all-read', [NotificationController::class, 'markAllRead'])->name('notification_all_read');

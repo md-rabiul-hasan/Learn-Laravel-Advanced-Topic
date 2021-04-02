@@ -55,14 +55,18 @@
 
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                Notification <span class="badge badge-secondary">{{ Auth::user()->notifications->count() }}</span>
+                                Notification <span class="badge badge-secondary">{{ Auth::user()->unreadnotifications->count() }}</span>
                             </a>
-
+                           
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                @foreach (Auth::user()->notifications as $notification)
-                                    <a class="dropdown-item" href="#">{{ $notification->data['data'] }}</a>
+                                <a class="dropdown-item" href="{{ route('notification_all_read')  }}">Mark All Read</a>
+                                <hr>
+                                @foreach (Auth::user()->unReadNotifications as $notification)
+                                    <a class="dropdown-item" style="color:red" href="#">{{ $notification->data['data'] }}</a>
                                 @endforeach
-                                
+                                @foreach (Auth::user()->readNotifications as $notification)
+                                    <a class="dropdown-item" style="color:green" href="#">{{ $notification->data['data'] }}</a>
+                                @endforeach
                             </div>
                         </li>
 
