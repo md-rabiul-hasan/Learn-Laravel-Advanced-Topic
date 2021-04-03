@@ -7,6 +7,7 @@ use App\Http\Controllers\FromValidationController;
 use App\Http\Controllers\GateController;
 use App\Http\Controllers\GatePolicyController;
 use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\PayOrderController;
 use App\Http\Controllers\QueueController;
 use App\Http\Controllers\SendMessageEventController;
 use Illuminate\Notifications\Notification;
@@ -85,3 +86,8 @@ Route::get('gatepolicy', [GatePolicyController::class, 'delete'])->middleware('c
 Route::get('notification', [NotificationController::class, 'notify']);
 Route::get('send-notification', [NotificationController::class, 'sendNotification']);
 Route::get('notification-mark-all-read', [NotificationController::class, 'markAllRead'])->name('notification_all_read');
+
+##############################################
+# Laravel Service Container
+##############################################
+Route::get('payment', [PayOrderController::class, 'payment']);
