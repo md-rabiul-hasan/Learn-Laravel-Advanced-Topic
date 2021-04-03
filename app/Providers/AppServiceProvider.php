@@ -5,6 +5,8 @@ namespace App\Providers;
 use App\Billing\BankPaymentGateway;
 use App\Billing\CreditCardPaymentGateway;
 use App\Billing\PaymentGateway;
+use App\View\Composers\ChannelComposers;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -31,6 +33,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        View::composer('view-composer.partial.channel.*', ChannelComposers::class);
     }
 }

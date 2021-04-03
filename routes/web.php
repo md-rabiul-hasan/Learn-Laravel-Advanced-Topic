@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChannelController;
 use App\Http\Controllers\EventListenerController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -10,6 +11,7 @@ use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\PayOrderController;
 use App\Http\Controllers\QueueController;
 use App\Http\Controllers\SendMessageEventController;
+use App\Models\Channel;
 use Illuminate\Notifications\Notification;
 
 /*
@@ -91,3 +93,9 @@ Route::get('notification-mark-all-read', [NotificationController::class, 'markAl
 # Laravel Service Container
 ##############################################
 Route::get('payment', [PayOrderController::class, 'payment']);
+
+##############################################
+# Laravel View Composer
+##############################################
+Route::get('channels', [ChannelController::class, 'index']);
+Route::get('post/create', [ChannelController::class, 'postCreate']);
